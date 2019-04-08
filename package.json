@@ -1,0 +1,22 @@
+{
+  "name": "mongodb_test",
+  "version": "1.0.0",
+  "description": "test use node.js operate mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fred4444source/mongodb_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fred4444source/mongodb_test/issues"
+  },
+  "homepage": "https://github.com/fred4444source/mongodb_test#readme",
+  "dependencies": {
+    "mongodb": "^3.2.3"
+  }
+}
