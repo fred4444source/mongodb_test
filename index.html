@@ -5,6 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
 		<title>Log</title>
 		<style>
+			.class___line_head {
+				margin-left : 2em;
+			}
 			.command {
 				background-color : black;
 				color : yellow;
@@ -23,6 +26,122 @@
 				<h2>install mongodb node.js driver</h2>
 				<p class="command">
 					npm install mongodb --save
+				</p>
+			</section>
+			<section>
+				<h2>start mongodb server</h2>
+				<p>
+					see the
+					<a target="_blank" href="https://docs.mongodb.com/manual/reference/program/mongod/">Reference > MongoDB Package Components > mongod</a>
+					<br/>
+					<span class="class___line_head"></span>--config &lt;filename&gt;, -f &lt;filename&gt;
+					<br/>
+					<span class="class___line_head"></span><span class="class___line_head"></span>Specifies a configuration file for runtime configuration options. The configuration file is the preferred method for runtime configuration of mongod. The options are equivalent to the command-line configuration options. See Configuration File Options for more information.
+				</p>
+			</section>
+			<section>
+				<h2>查看当前数据库名称</h2>
+				<p class="command">
+					db
+				</p>
+				or
+				<p class="command">
+					db.getName();
+				</p>
+				output :
+				<p class="command">
+					test
+				</p>
+			</section>
+			<section>
+				<h2>数据库相关帮助</h2>
+				<p class="command">
+					db.help();
+				</p>
+			</section>
+			<section>
+				<h2>查看所有数据库</h2>
+				<p class="command">
+					show dbs
+				</p>
+				output :
+				<p class="command">
+					admin   0.000GB
+					<br/>
+					config  0.000GB
+					<br/>
+					local   0.000GB
+				</p>
+			</section>
+			<section>
+				<h2>切换或创建数据库</h2>
+				当制定名称的数据库不存在时便自动创建
+				<p class="command">
+					use shell_test
+				</p>
+				output :
+				<p class="command">
+					switched to db shell_test
+				</p>
+			</section>
+			<section>
+				<h2>查看当前数据库的统计信息</h2>
+				<p class="command">
+					db.stats();
+				</p>
+				output :
+				<p class="command">
+					{
+					<br/>
+					<span class="class___line_head"></span>"db" : "test",
+					<br/>
+					<span class="class___line_head"></span>"collections" : 0,
+					<br/>
+					<span class="class___line_head"></span>"views" : 0,
+					<br/>
+					<span class="class___line_head"></span>"objects" : 0,
+					<br/>
+					<span class="class___line_head"></span>"avgObjSize" : 0,
+					<br/>
+					<span class="class___line_head"></span>"dataSize" : 0,
+					<br/>
+					<span class="class___line_head"></span>"storageSize" : 0,
+					<br/>
+					<span class="class___line_head"></span>"numExtents" : 0,
+					<br/>
+					<span class="class___line_head"></span>"indexes" : 0,
+					<br/>
+					<span class="class___line_head"></span>"indexSize" : 0,
+					<br/>
+					<span class="class___line_head"></span>"fileSize" : 0,
+					<br/>
+					<span class="class___line_head"></span>"fsUsedSize" : 0,
+					<br/>
+					<span class="class___line_head"></span>"fsTotalSize" : 0,
+					<br/>
+					<span class="class___line_head"></span>"ok" : 1
+					<br/>
+					}
+				</p>
+			</section>
+			<section>
+				<h2>查看数据库服务的版本</h2>
+				<p class="command">
+					db.version();
+				</p>
+				output :
+				<p class="command">
+					4.0.7
+				</p>
+			</section>
+			<section>
+				<h2>查看所有数据库服务的链接地址</h2>
+				<p class="command">
+					db.getMongo();
+				</p>
+				output :
+				<p class="command">
+					connection to 127.0.0.1:27017
 				</p>
 			</section>
 		</article>
