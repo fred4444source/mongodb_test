@@ -85,6 +85,15 @@
 				</p>
 			</section>
 			<section>
+				<h2>删除数据库</h2>
+				<p class="command">
+					use dbname;
+					<br/>
+					db.dropDatabase();
+				</p>
+				先选择使用要删除的数据库, 在删除当前数据库
+			</section>
+			<section>
 				<h2>查看当前数据库的统计信息</h2>
 				<p class="command">
 					db.stats();
@@ -142,6 +151,68 @@
 				output :
 				<p class="command">
 					connection to 127.0.0.1:27017
+				</p>
+			</section>
+			<section>
+				<h2>查看当前数据库中的集合名称</h2>
+				<p class="command">
+					show collections;
+				</p>
+				or
+				<p class="command">
+					db.getCollectionNames();
+				</p>
+			</section>
+			<section>
+				<h2>使用集合</h2>
+				<p class="command">
+					db.getCollection("collection_name");
+				</p>
+				or
+				<p class="command">
+					db.collection_name
+				</p>
+				当集合名称为全数字时只能使用第1种形式, 第2种形式会报错
+			</section>
+			<section>
+				<h2>查看当前集合中的文档数</h2>
+				<p class="command">
+					db.getCollection("collection_name").count;
+				</p>
+				or
+				<p class="command">
+					db.collection_name.count();
+				</p>
+			</section>
+			<section>
+				<h2>创建集合</h2>
+				<p class="command">
+					db.createCollection("collection_name", option);
+				</p>
+				or
+				<p class="command">
+					db.collection_name;
+				</p>
+				第2种形式为当存在便使用当不存在时便直接创建, 但当创建固定容量集合或创建名称为全数字的集合时只能使用第1种形式, 当不是创建固定容量集合时第1种形式中的option为可选项不用给出
+			</section>
+			<section>
+				<h2>集合重命名</h2>
+				<p class="command">
+					db.getCollection("collection_name").renameCollection("collection_new_name");
+				</p>
+				or
+				<p class="command">
+					db.collection_name.renameCollection("collection_new_name");
+				</p>
+			</section>
+			<section>
+				<h2>删除集合</h2>
+				<p class="command">
+					db.getCollection("collection_name").drop();
+				</p>
+				or
+				<p class="command">
+					db.collection_name.drop();
 				</p>
 			</section>
 		</article>
