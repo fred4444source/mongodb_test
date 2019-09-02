@@ -8,7 +8,7 @@
 			.class___line_head {
 				margin-left : 2em;
 			}
-			.command {
+			.class___command {
 				background-color : black;
 				color : yellow;
 				padding : 10px;
@@ -33,7 +33,7 @@
 			</header>
 			<section>
 				<h2>install mongodb node.js driver</h2>
-				<p class="command">
+				<p class="class___command">
 					npm install mongodb --save
 				</p>
 			</section>
@@ -47,41 +47,41 @@
 					<br/>
 					<span class="class___line_head"></span><span class="class___line_head"></span>Specifies a configuration file for runtime configuration options. The configuration file is the preferred method for runtime configuration of mongod. The options are equivalent to the command-line configuration options. See Configuration File Options for more information.
 				</p>
-				<p class="command">
+				<p class="class___command">
 					mongod --config &lt;filename&gt;
 				</p>
 				or
-				<p class="command">
+				<p class="class___command">
 					mongod -f &lt;filename&gt;
 				</p>
 			</section>
 			<section>
 				<h2>查看当前数据库名称</h2>
-				<p class="command">
+				<p class="class___command">
 					db
 				</p>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.getName();
 				</p>
 				output :
-				<p class="command">
+				<p class="class___command">
 					test
 				</p>
 			</section>
 			<section>
 				<h2>数据库相关帮助</h2>
-				<p class="command">
+				<p class="class___command">
 					db.help();
 				</p>
 			</section>
 			<section>
 				<h2>查看所有数据库</h2>
-				<p class="command">
+				<p class="class___command">
 					show dbs
 				</p>
 				output :
-				<p class="command">
+				<p class="class___command">
 					admin   0.000GB
 					<br/>
 					config  0.000GB
@@ -92,17 +92,17 @@
 			<section>
 				<h2>切换或创建数据库</h2>
 				当制定名称的数据库不存在时便自动创建
-				<p class="command">
+				<p class="class___command">
 					use shell_test
 				</p>
 				output :
-				<p class="command">
+				<p class="class___command">
 					switched to db shell_test
 				</p>
 			</section>
 			<section>
 				<h2>删除数据库</h2>
-				<p class="command">
+				<p class="class___command">
 					use dbname;
 					<br/>
 					db.dropDatabase();
@@ -111,11 +111,11 @@
 			</section>
 			<section>
 				<h2>查看当前数据库的统计信息</h2>
-				<p class="command">
+				<p class="class___command">
 					db.stats();
 				</p>
 				output :
-				<p class="command">
+				<p class="class___command">
 					{
 					<br/>
 					<span class="class___line_head"></span>"db" : "test",
@@ -151,95 +151,95 @@
 			</section>
 			<section>
 				<h2>查看数据库服务的版本</h2>
-				<p class="command">
+				<p class="class___command">
 					db.version();
 				</p>
 				output :
-				<p class="command">
+				<p class="class___command">
 					4.0.7
 				</p>
 			</section>
 			<section>
 				<h2>查看所有数据库服务的链接地址</h2>
-				<p class="command">
+				<p class="class___command">
 					db.getMongo();
 				</p>
 				output :
-				<p class="command">
+				<p class="class___command">
 					connection to 127.0.0.1:27017
 				</p>
 			</section>
 			<section>
 				<h2>查看当前数据库中的集合名称</h2>
-				<p class="command">
+				<p class="class___command">
 					show collections;
 				</p>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.getCollectionNames();
 				</p>
 			</section>
 			<section>
 				<h2>使用集合</h2>
-				<p class="command">
+				<p class="class___command">
 					db.getCollection("collection_name");
 				</p>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.collection_name
 				</p>
 				当集合名称为全数字时只能使用第1种形式, 第2种形式会报错
 			</section>
 			<section>
 				<h2>查看当前集合中的文档数</h2>
-				<p class="command">
+				<p class="class___command">
 					db.getCollection("collection_name").count;
 				</p>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.collection_name.count();
 				</p>
 			</section>
 			<section>
 				<h2>创建集合</h2>
-				<p class="command">
+				<p class="class___command">
 					db.createCollection("collection_name", option);
 				</p>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.collection_name;
 				</p>
 				第2种形式为当存在便使用当不存在时便直接创建, 但当创建固定容量集合或创建名称为全数字的集合时只能使用第1种形式, 当不是创建固定容量集合时第1种形式中的option为可选项不用给出
 			</section>
 			<section>
 				<h2>集合重命名</h2>
-				<p class="command">
+				<p class="class___command">
 					db.getCollection("collection_name").renameCollection("collection_new_name");
 				</p>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.collection_name.renameCollection("collection_new_name");
 				</p>
 			</section>
 			<section>
 				<h2>删除集合</h2>
-				<p class="command">
+				<p class="class___command">
 					db.getCollection("collection_name").drop();
 				</p>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.collection_name.drop();
 				</p>
 			</section>
 			<section>
 				<h2>新增文档</h2>
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.insertOne({name : 'Tom', age : '29', weight : 140});
 				</p>
 				一次新增一个(且只能是一个)文档对象
 				<br/>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.insertMany([
 						<br/>
 						<span class="class___tab">&#9;</span>{name : 'Tom1', age : '29', weight : 140},
@@ -253,7 +253,7 @@
 				一次新增多个文档对象
 				<br/>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.insert({name : 'Tom', age : '29', weight : 140});
 					<br/>
 					db.&lt;collection_name&gt;.insert([
@@ -269,7 +269,7 @@
 				新增文档对象单个或多个均可
 				<br/>
 				or
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.save({name : 'Tom', age : '29', weight : 140});
 				</p>
 				如果给定的文档对象中未含有_id字段则save方法调用insert方法, 若含有_id则save方法到用upset方法并且指定参数option为true
@@ -282,15 +282,15 @@
 			</section>
 			<section>
 				<h2>查询文档</h2>
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.find({})
 				</p>
 				查询集合中的所有文档
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.find({name : "Tom1"})
 				</p>
 				查询集合中所有属性name为"Tom1"的文档
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.find({
 					<br/>
 						<span class="class___tab">&#9;</span>age : {
@@ -302,7 +302,7 @@
 					})
 				</p>
 				查询集合中所有属性age大于27的文档
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.find({
 						<br/>
 						<span class="class___tab">&#9;</span>name : {
@@ -314,7 +314,7 @@
 					})
 				</p>
 				查询集合中所有属性name为"Tom1"或"Tom2"的文档
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.find({
 					<br/>
 						<span class="class___tab">&#9;</span>$or : [
@@ -328,7 +328,7 @@
 					})
 				</p>
 				查询集合中所有属性name为"Tom1"或属性age为28的文档
-				<p class="command">
+				<p class="class___command">
 					db.&lt;collection_name&gt;.find({
 					<br/>
 						<span class="class___tab">&#9;</span>name : {
