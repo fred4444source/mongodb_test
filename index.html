@@ -13,6 +13,15 @@
 				color : yellow;
 				padding : 10px;
 			}
+			.class___tab {
+				display : inline-block;
+				width : 4ex;
+				overflow-x : hidden;
+				line-height : 24px;
+				font-size : 18px;
+				vertical-align : bottom;
+				white-space : pre-wrap;
+			}
 		</style>
 		<script>
 		</script>
@@ -37,6 +46,13 @@
 					<span class="class___line_head"></span>--config &lt;filename&gt;, -f &lt;filename&gt;
 					<br/>
 					<span class="class___line_head"></span><span class="class___line_head"></span>Specifies a configuration file for runtime configuration options. The configuration file is the preferred method for runtime configuration of mongod. The options are equivalent to the command-line configuration options. See Configuration File Options for more information.
+				</p>
+				<p class="command">
+					mongod --config &lt;filename&gt;
+				</p>
+				or
+				<p class="command">
+					mongod -f &lt;filename&gt;
 				</p>
 			</section>
 			<section>
@@ -214,6 +230,120 @@
 				<p class="command">
 					db.collection_name.drop();
 				</p>
+			</section>
+			<section>
+				<h2>新增文档</h2>
+				<p class="command">
+					db.&lt;collection_name&gt;.insertOne({name : 'Tom', age : '29', weight : 140});
+				</p>
+				一次新增一个(且只能是一个)文档对象
+				<br/>
+				or
+				<p class="command">
+					db.&lt;collection_name&gt;.insertMany([
+						<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom1', age : '29', weight : 140},
+						<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom2', age : '28', weight : 130},
+						<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom3', age : '27', weight : 120}
+						<br/>
+					]);
+				</p>
+				一次新增多个文档对象
+				<br/>
+				or
+				<p class="command">
+					db.&lt;collection_name&gt;.insert({name : 'Tom', age : '29', weight : 140});
+					<br/>
+					db.&lt;collection_name&gt;.insert([
+						<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom1', age : '29', weight : 140},
+						<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom2', age : '28', weight : 130},
+						<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom3', age : '27', weight : 120}
+						<br/>
+					]);
+				</p>
+				新增文档对象单个或多个均可
+				<br/>
+				or
+				<p class="command">
+					db.&lt;collection_name&gt;.save({name : 'Tom', age : '29', weight : 140});
+				</p>
+				如果给定的文档对象中未含有_id字段则save方法调用insert方法, 若含有_id则save方法到用upset方法并且指定参数option为true
+				<br/>
+				<br/>
+				<br/>
+				如果在新增文档时指定名称的集合不存在则将自动创建这个名称的集合然后执行新增文档操作
+				<br/>
+				新增操作的原子性在文档级别即只锁定到操作所涉及的文档对象
+			</section>
+			<section>
+				<h2>查询文档</h2>
+				<p class="command">
+					db.&lt;collection_name&gt;.find({})
+				</p>
+				查询集合中的所有文档
+				<p class="command">
+					db.&lt;collection_name&gt;.find({name : "Tom1"})
+				</p>
+				查询集合中所有属性name为"Tom1"的文档
+				<p class="command">
+					db.&lt;collection_name&gt;.find({
+					<br/>
+						<span class="class___tab">&#9;</span>age : {
+						<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$gt : 27
+							<br/>
+						<span class="class___tab">&#9;</span>}
+						<br/>
+					})
+				</p>
+				查询集合中所有属性age大于27的文档
+				<p class="command">
+					db.&lt;collection_name&gt;.find({
+						<br/>
+						<span class="class___tab">&#9;</span>name : {
+						<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$in : ["Tom1", "Tom2"]
+						<br/>
+						<span class="class___tab">&#9;</span>}
+						<br/>
+					})
+				</p>
+				查询集合中所有属性name为"Tom1"或"Tom2"的文档
+				<p class="command">
+					db.&lt;collection_name&gt;.find({
+					<br/>
+						<span class="class___tab">&#9;</span>$or : [
+						<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>{name : "Tom1"},
+							<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>{age : 28}
+							<br/>
+						<span class="class___tab">&#9;</span>]
+						<br/>
+					})
+				</p>
+				查询集合中所有属性name为"Tom1"或属性age为28的文档
+				<p class="command">
+					db.&lt;collection_name&gt;.find({
+					<br/>
+						<span class="class___tab">&#9;</span>name : {
+						<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$in : ["Tom1", "Tom2"]
+							<br/>
+						<span class="class___tab">&#9;</span>}
+						<br/>
+					})
+				</p>
+				查询集合中所有属性name为"Tom1"或"Tom2"的文档
+				<br/>
+				<br/>
+				<br/>
+				查询返回一个集合并含有一个游标
 			</section>
 		</article>
 	</body>
