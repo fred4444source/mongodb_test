@@ -41,10 +41,8 @@
 				<h2>start mongodb server</h2>
 				<p>
 					see the
-					<a target="_blank" href="https://docs.mongodb.com/manual/reference/program/mongod/">Reference > MongoDB Package Components > mongod</a>
-					<br/>
-					<span class="class___line_head"></span>--config &lt;filename&gt;, -f &lt;filename&gt;
-					<br/>
+					<a target="_blank" href="https://docs.mongodb.com/manual/reference/program/mongod/">Reference > MongoDB Package Components > mongod</a><br/>
+					<span class="class___line_head"></span>--config &lt;filename&gt;, -f &lt;filename&gt;<br/>
 					<span class="class___line_head"></span><span class="class___line_head"></span>Specifies a configuration file for runtime configuration options. The configuration file is the preferred method for runtime configuration of mongod. The options are equivalent to the command-line configuration options. See Configuration File Options for more information.
 				</p>
 				<p class="class___command">
@@ -82,10 +80,8 @@
 				</p>
 				output :
 				<p class="class___command">
-					admin   0.000GB
-					<br/>
-					config  0.000GB
-					<br/>
+					admin   0.000GB<br/>
+					config  0.000GB<br/>
 					local   0.000GB
 				</p>
 			</section>
@@ -116,36 +112,21 @@
 				</p>
 				output :
 				<p class="class___command">
-					{
-					<br/>
-					<span class="class___line_head"></span>"db" : "test",
-					<br/>
-					<span class="class___line_head"></span>"collections" : 0,
-					<br/>
-					<span class="class___line_head"></span>"views" : 0,
-					<br/>
-					<span class="class___line_head"></span>"objects" : 0,
-					<br/>
-					<span class="class___line_head"></span>"avgObjSize" : 0,
-					<br/>
-					<span class="class___line_head"></span>"dataSize" : 0,
-					<br/>
-					<span class="class___line_head"></span>"storageSize" : 0,
-					<br/>
-					<span class="class___line_head"></span>"numExtents" : 0,
-					<br/>
-					<span class="class___line_head"></span>"indexes" : 0,
-					<br/>
-					<span class="class___line_head"></span>"indexSize" : 0,
-					<br/>
-					<span class="class___line_head"></span>"fileSize" : 0,
-					<br/>
-					<span class="class___line_head"></span>"fsUsedSize" : 0,
-					<br/>
-					<span class="class___line_head"></span>"fsTotalSize" : 0,
-					<br/>
-					<span class="class___line_head"></span>"ok" : 1
-					<br/>
+					{<br/>
+					<span class="class___line_head"></span>"db" : "test",<br/>
+					<span class="class___line_head"></span>"collections" : 0,<br/>
+					<span class="class___line_head"></span>"views" : 0,<br/>
+					<span class="class___line_head"></span>"objects" : 0,<br/>
+					<span class="class___line_head"></span>"avgObjSize" : 0,<br/>
+					<span class="class___line_head"></span>"dataSize" : 0,<br/>
+					<span class="class___line_head"></span>"storageSize" : 0,<br/>
+					<span class="class___line_head"></span>"numExtents" : 0,<br/>
+					<span class="class___line_head"></span>"indexes" : 0,<br/>
+					<span class="class___line_head"></span>"indexSize" : 0,<br/>
+					<span class="class___line_head"></span>"fileSize" : 0,<br/>
+					<span class="class___line_head"></span>"fsUsedSize" : 0,<br/>
+					<span class="class___line_head"></span>"fsTotalSize" : 0,<br/>
+					<span class="class___line_head"></span>"ok" : 1<br/>
 					}
 				</p>
 			</section>
@@ -240,30 +221,21 @@
 				<br/>
 				or
 				<p class="class___command">
-					db.&lt;collection_name&gt;.insertMany([
-						<br/>
-						<span class="class___tab">&#9;</span>{name : 'Tom1', age : '29', weight : 140},
-						<br/>
-						<span class="class___tab">&#9;</span>{name : 'Tom2', age : '28', weight : 130},
-						<br/>
-						<span class="class___tab">&#9;</span>{name : 'Tom3', age : '27', weight : 120}
-						<br/>
+					db.&lt;collection_name&gt;.insertMany([<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom1', age : '29', weight : 140},<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom2', age : '28', weight : 130},<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom3', age : '27', weight : 120}<br/>
 					]);
 				</p>
 				一次新增多个文档对象
 				<br/>
 				or
 				<p class="class___command">
-					db.&lt;collection_name&gt;.insert({name : 'Tom', age : '29', weight : 140});
-					<br/>
-					db.&lt;collection_name&gt;.insert([
-						<br/>
-						<span class="class___tab">&#9;</span>{name : 'Tom1', age : '29', weight : 140},
-						<br/>
-						<span class="class___tab">&#9;</span>{name : 'Tom2', age : '28', weight : 130},
-						<br/>
-						<span class="class___tab">&#9;</span>{name : 'Tom3', age : '27', weight : 120}
-						<br/>
+					db.&lt;collection_name&gt;.insert({name : 'Tom', age : '29', weight : 140});<br/>
+					db.&lt;collection_name&gt;.insert([<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom1', age : '29', weight : 140},<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom2', age : '28', weight : 130},<br/>
+						<span class="class___tab">&#9;</span>{name : 'Tom3', age : '27', weight : 120}<br/>
 					]);
 				</p>
 				新增文档对象单个或多个均可
@@ -291,46 +263,32 @@
 				</p>
 				查询集合中所有属性name为"Tom1"的文档
 				<p class="class___command">
-					db.&lt;collection_name&gt;.find({
-					<br/>
-						<span class="class___tab">&#9;</span>age : {
-						<br/>
-							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$gt : 27
-							<br/>
-						<span class="class___tab">&#9;</span>}
-						<br/>
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>age : {<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$gt : 27<br/>
+						<span class="class___tab">&#9;</span>}<br/>
 					})
 				</p>
 				查询集合中所有属性age大于27的文档
 				<p class="class___command">
-					db.&lt;collection_name&gt;.find({
-						<br/>
-						<span class="class___tab">&#9;</span>name : {
-						<br/>
-							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$in : ["Tom1", "Tom2"]
-						<br/>
-						<span class="class___tab">&#9;</span>}
-						<br/>
-					})
-				</p>
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>name : {<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$in : ["Tom1", "Tom2"]<br/>
+						<span class="class___tab">&#9;</span>}<br/>
+					})</p>
 				查询集合中所有属性name为"Tom1"或"Tom2"的文档
 				<p class="class___command">
 					db.&lt;collection_name&gt;.find({
 					<br/>
-						<span class="class___tab">&#9;</span>$or : [
-						<br/>
-							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>{name : "Tom1"},
-							<br/>
-							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>{age : 28}
-							<br/>
-						<span class="class___tab">&#9;</span>]
-						<br/>
+						<span class="class___tab">&#9;</span>$or : [<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>{name : "Tom1"},<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>{age : 28}<br/>
+						<span class="class___tab">&#9;</span>]<br/>
 					})
 				</p>
 				查询集合中所有属性name为"Tom1"或属性age为28的文档
 				<p class="class___command">
-					db.&lt;collection_name&gt;.find({
-					<br/>
+					db.&lt;collection_name&gt;.find({<br/>
 						<span class="class___tab">&#9;</span>name : {
 						<br/>
 							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$in : ["Tom1", "Tom2"]
@@ -340,6 +298,78 @@
 					})
 				</p>
 				查询集合中所有属性name为"Tom1"或"Tom2"的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>size : {<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>h : 14,<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>w : 21,<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>uom : "cm",<br/>
+						<span class="class___tab">&#9;</span>}<br/>
+					})
+				</p>
+				查询集合中所有与size属性值完全相同(包括属性出现的前后顺序)的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({size.uom: : "in"})
+				</p>
+				查询集合中所有size属性的子属性uom的值为值"in"的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>tags : ["red", "black"]<br/>
+					})
+				</p>
+				查询集合中所有与属性tags值完全相同的数组(包括元素的顺序)的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>tags : {<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$all : ["red", "black"]<br/>
+						<span class="class___tab">&#9;</span>}<br/>
+					})
+				</p>
+				查询集合中所有与属性tags数组中同时含有"red"和"black"元素的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({tags : "red"})
+				</p>
+				查询集合中所有属性tags数组含有"red"元素的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>dim_cm : {<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$gt : 25<br/>
+						<span class="class___tab">&#9;</span>}<br/>
+					})
+				</p>
+				查询集合中所有属性dim_cm数组中含有大于25的元素的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>dim_cm : {<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$gt : 15,<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$lt : 20<br/>
+						<span class="class___tab">&#9;</span>}<br/>
+					})
+				</p>
+				查询集合中所有属性dim_cm数组中含有大于15或小于20的元素的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>dim_cm : {<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$elemMatch : {<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$gt : 22,<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>$lt : 30<br/>
+							<span class="class___tab">&#9;</span><span class="class___tab">&#9;</span>}<br/>
+						<span class="class___tab">&#9;</span>}<br/>
+					})
+				</p>
+				查询集合中所有属性dim_cm数组中含有大于22且小于30的元素的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>"dim_cm.1" : {$gt : 25}<br/>
+					})
+				</p>
+				查询集合中所有属性dim_cm数组中索引为1的元素大于25的文档
+				<p class="class___command">
+					db.&lt;collection_name&gt;.find({<br/>
+						<span class="class___tab">&#9;</span>tags : {$size : 3}<br/>
+					})
+				</p>
+				查询集合中所有属性tags数组长度为3的文档
 				<br/>
 				<br/>
 				<br/>
