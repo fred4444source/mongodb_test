@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/fred4444source/mongodb_test#readme",
   "dependencies": {
-    "mongodb": "^3.2.3"
+    "mongodb": "^3.3.4"
   }
 }
