@@ -395,15 +395,19 @@
 			</section>
 			<section>
 				<h2>查询排序, 选择结果范围</h2>
-				举例查询score集合按mathematics字段升序排序, 前21至30条结果:
-				<div class="class___command">
-					db.score.find({}).sort({mathematics : 1}).skip(20).limit(10);
+				<div>
+					举例查询score集合按mathematics字段升序排序, 前21至30条结果:
+					<div class="class___command">
+						db.score.find({}).sort({mathematics : 1}).skip(20).limit(10);
+					</div>
+					sort的参数为查询字段集合,字段的值为排序方式1为升序-1为降序, sort({mathematics : 1, physics : -1})表示先按mathematics字段升序排序再按physics字段降序排序
+					<br/>
+					skip(20)表示舍去前20条记录
+					<br/>
+					limit(10)表示返回10条记录
+					<br/>
+					若在node.js中sort({mathematics : 1, physics : -1})则为sort([[mathematics, 1], [physics, -1]])
 				</div>
-				sort的参数为查询字段集合,字段的值为排序方式1为升序-1为降序, sort({mathematics : 1, physics : -1})表示先按mathematics字段升序排序再按physics字段降序排序
-				<br/>
-				skip(20)表示舍去前20条记录
-				<br/>
-				limit(10)表示返回10条记录
 			</section>
 		</article>
 	</body>
