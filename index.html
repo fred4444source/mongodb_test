@@ -13,6 +13,15 @@
 				color : yellow;
 				padding : 10px;
 			}
+			.class___code {
+				color : yellow;
+				background-color : black;
+				line-height : 24px;
+				font-size : 18px;
+				vertical-align : bottom;
+				white-space : nowrap;
+				overflow-x : auto;
+			}
 			.class___tab {
 				display : inline-block;
 				width : 4ex;
@@ -64,6 +73,29 @@
 				<p class="class___command">
 					npm install mongodb --save
 				</p>
+			</section>
+			<section>
+				<h2>配置文格式</h2>
+				<div>
+					mongod configuration file can't use tab, need use space instead
+					<br/>
+					object's sub property must use space on head for example:
+					<div class="class___code">
+						storage&nbsp;:&nbsp;{<br/>
+						<span class="class___tab">&#9;</span>dbPath&nbsp;:&nbsp;/home/share/mongodb_database/db<br/>
+						}<br/>
+					</div>
+					follow code is error:
+					<div class="class___code">
+						storage&nbsp;:<br/>
+						dbPath&nbsp;:&nbsp;/home/share/mongodb_database/db<br/>
+					</div>
+					follow code is correct:
+					<div class="class___code">
+						storage&nbsp;:<br/>
+						<span style="">&nbsp;&nbsp;&nbsp;&nbsp;</span>dbPath&nbsp;:&nbsp;/home/share/mongodb_database/db<br/>
+					</div>
+				</div>
 			</section>
 			<section>
 				<h2>start mongodb server</h2>
