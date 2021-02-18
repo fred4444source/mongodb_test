@@ -31,6 +31,9 @@
 				vertical-align : bottom;
 				white-space : pre-wrap;
 			}
+			.class___copy_other_people_content {
+				background-color : #aef5a8;
+			}
 		</style>
 		<script>
 		</script>
@@ -69,10 +72,114 @@
 				</div>
 			</section>
 			<section>
+				<h2>mongodb 许可证</h2>
+				<div>
+					<a target="_blank" href="https://www.sohu.com/a/302398106_99921288">从MongoDB更换开源许可协议谈开源软件法律风险_程序</a>
+					<div class="class___copy_other_people_content" style="white-space : pre-line;">
+						从MongoDB更换开源许可协议谈开源软件法律风险
+						2019-03-19 17:40
+
+						随着开源软件在云计算、大数据、人工智能等ICT新兴领域发挥越来越重要的作用，企业也逐渐成为开源的主要推动力量。开源不仅仅是一种可以汇集产业力量进行协同开发的生产模式，而且也是企业竞争的重要手段。一些维护开源项目的企业通过修改开源项目的许可协议以实现降低产品风险、打击竞争对手的目的。2016年7月，Facebook在其开源项目React的开源协议BSD中附加了专利条款，以降低Facebook的专利诉讼风险。2018年9月，数据库制造商Redis Labs宣布将其Redis模块的许可协议由AGPL v3变更为Apache v2与Commons Clause相结合的许可协议，以限制Redis相关软件的销售。2018年10月，MongoDB宣布其开源许可协议从AGPL v3切换到Server Side Public License (SSPL)，以遏制云服务提供商免费使用MongoDB。
+
+						一、SSPL许可协议解读
+
+						MangoDB分为商业版、社区版。MangoDB商业版本采用商业许可协议。2018年10月16日之前发布的MongoDB社区服务器版本采用AGPL v3许可协议，2018年10月16日当天或者是以后发布的所有的MongoDB社区服务器补丁和新版本都采用SSPL许可协议，包括旧版本的未来的补丁。
+
+						1、SSPL许可协议基本介绍
+
+						SSPL许可协议是在GPL v3基础上修改得到的，但是SSPL的管理者是MangoDB公司，而不是自由软件基金会。MangoDB公司已经将SSPL提交给OSI（Open Source Initiative）进行审批。截至目前，SSPL尚未得到OSI的认证。
+
+						SSPL许可协议共有17个条款，除第13条款与GPL v3规定不同外，其余条款与GPL v3大致相同。SSPL许可协议有以下特点：
+
+						第一，SSPL与GPL等开源许可协议一样，赋予被许可人四项基本的权利，包括：自由运行程序、自由获得源代码、自由发布复制程序、自由修改程序并将自己作出的改进版本向公众发行传播。
+
+						第二，SSPL是强传染性许可协议。这意味着：用户如果对SSPL许可的软件或基于SSPL许可的软件的作品再发布时，必须以SSPL许可协议进行再发布。
+
+						第三，将SSPL许可下的程序再发布或将程序作为服务提供时，必须提供源代码。无论SSPL约束的软件以目标代码或是可执行程序复制、发布时，都必须提供源代码。
+
+						第四，SSPL明示了专利授权。与GPL v3完全相同，SSPL许可协议的第11条款明示了专利授权。程序发布者即使就发布的贡献申请了专利，在获得专利授权后也必须将相关专利授权都免费许可给使用该程序的每一个人。
+
+						第五，SSPL存在不担保条款。几乎所有的开源许可协议都存在不担保条款，不提供任何明示或暗示的担保，包括但不限于适销性和用于特定目的的适用性担保。对于使用开源程序发生的任何损失，版权所有人或其他第三方均不承担任何责任。因为开源软件已经是免费许可，因此就不对软件版权所有人要求担保义务。
+
+						2、SSPL、GPL v3、AGPL v3对比分析
+
+						GPL v3、AGPL v3、SSPL这三个许可协议的差异主要体现在第13条款。
+
+						GPL v3第13条款是“和AGPL一起使用”的相关条款的规定：尽管本许可协议有其他条款，您可以把任何覆盖程序和AGPL v3许可的程序链接在一起，成为一个联合程序并发布。本许可协议的条款对于您覆盖程序的那一部分仍然有效，但是根据AGPL v3的第13条款，关于通过网络交互的特殊要求对整个联合体有效。
+
+						AGPL v3第13条款是“远程网络交互：和GPL许可协议一起使用”的相关条款规定：尽管本许可协议有任何其他规定，如果您修改了程序，修改后的程序必须明确地向所有交互用户提供机会，来使其能够通过计算机远程网络（如果您的版本支持此类交互）接收该版本的对应源代码，即通过一些方便用户复制软件的标准或常用方法在网络服务器上免费提供对应源代码。尽管本许可协议有其他条款，您可以把任何受协议约束的作品和基于GPL v3的程序链接在一起，成为一个联合程序并发布。本许可协议的条款对于您受协议约束的作品的那一部分仍然有效，但是这个受协议约束的作品联合的GPL v3许可下的作品仍然在GPL v3下授权。
+
+						SSPL第13条款是关于“将程序作为服务提供”的规定：如果您将本程序或修改版本的功能作为服务提供给第三方，则根据本许可协议条款的规定，您必须通过网络下载的方式免费向所有人提供服务源代码。将本程序或者修改版本的功能作为服务向第三方提供的情况包括但不限于：使第三方能够通过计算机网络远程与本程序或修改版本的功能进行交互、提供的服务其价值完全或主要来自于本程序或修改版本的价值、提供的服务是为用户完成本程序或修改版本为主要目的。“服务源代码”是指：本程序或修改版本对应的源代码，以及用于使本程序或者修改版本作为服务提供的所有程序对应的源代码，包括但不限于：管理软件、用户界面、应用程序接口、自动化软件、监控软件、备份软件、存储软件和托管软件。用户可以使用您提供的这些服务源代码运行服务实例。
+
+						通过对比这三个许可协议的第13条款的规定，可以发现：
+
+						第一，AGPL、SSPL许可协议的规定比GPL更为严苛。按照GPL许可协议的规定，任何人都可以以提供技术服务为目的，运行私有修改的GPL许可下的程序，只要不发布软件，不需要公开源代码。但是，AGPL许可协议将Copyleft这一概念延伸至网络上自由软件所交付的服务。在AGPL的规定中，如果其许可的程序与用户通过网络进行远程交互，那么就需要提供源代码给用户，所有的修改也需要提供给用户。常见的“通过计算机远程网络交互”的场景有：网络和邮件服务器、基于互动的网络应用程序和在线播放的游戏服务器等。在SSPL许可协议中，明确规定将程序或程序的修改版本的功能作为服务向第三方提供时，需要提供“服务源代码”。最为典型的场景即云平台提供商将软件托管产品打包成服务。
+
+						第二，GPL、AGPL、SSPL都是强著佐权型许可协议。GPL、AGPL许可协议第13条款分别规定了GPL许可下的程序和AGPL许可下的程序在一起使用的情况，因此，GPL、AGPL许可协议是兼容的。但是，SSPL许可协议与GPL、AGPL都不兼容，也即：SSPL许可的代码不能和GPL或AGPL许可的代码组成一个程序发布。
+
+						二、MangoDB更改许可协议原因分析
+
+						SSPL与AGPL v3最大的不同是更加明确规定了将程序作为服务提供的限制条件。MangoDB将许可协议从AGPL v3改为SSPL有法律、商业两个层面的原因。
+
+						1、AGPL v3许可协议的规定不明确导致很多企业一直在考验AGPL的边界
+
+						AGPL v3第13条款规定了“远程网络交互”的限制条件。但是，业界对于AGPL远程网络交互的触发条件以及范围存有争议。因此，SSPL明确规定了将程序作为服务提供的条件限制。
+
+						AGPL v3传染性范围判断也较为模糊。GPL v3/AGPL v3提出了“聚合体”的概念，认为将GPL许可下的程序纳入到聚合体中不会导致对聚合体的其他部分适用GPL v3/AGPL v3许可协议，即不会产生“传染性”。然而，关于两个程序是否组成了“聚合体”，产业界仍然有很大争议，司法界也没有相关判例。这直接导致很多企业一直游走在违反AGPL许可协议的灰色地带。
+
+						2、“软件即服务”的兴起冲击了MangoDB的商业模式
+
+						开源不仅是一种软件开发模式，也代表了一种独特的商业模式。MangoDB开源软件采用了双许可的商业模式。MangoDB分为企业版、开源社区版两个版本。开源社区版本以SSPL许可协议免费许可给用户，这样便于测试软件、获得改进信息、得到开发者的支持、赢得口碑，有助于市场推广。企业版本采用商业许可，为企业使用者提供更为丰富的功能以及提供技术支持、担保等服务。MangoDB通过向商业用户收取授权费用而盈利。采用双许可模式的开源企业，通常会为其社区版本选择如GPL、AGPL这样的强著佐权型的许可协议，一定程度上限制了其他企业在社区版本的基础上修改并销售软件。
+
+						近几年，“软件即服务”的观念深入人心，IT产业逐渐向服务化转型。用户不需要购买软硬件，而是通过互联网向厂商订购所属的应用软件服务。IT厂商越来越倾向于通过服务收费，而不是通过售卖软硬件收费。此种情况下，一些云服务厂商将MangoDB的社区版本修改后向用户提供其数据库的托管商业版本，而不将修改的源代码公开回馈给社区。如此一来，这些云服务厂商相当于从MangoDB企业版销售中分了一杯羹，抢占了其销售份额。MangoDB更换许可协议就是要遏制云服务提供商攫取开源软件价值却不给予开源社区任何回报的行为。
+
+						三、MangoDB更改许可协议影响分析
+
+						MangoDB更改许可协议对于不同涉事主体影响不同，需要从多角度来分析。
+
+						1、许可协议更改对MangoDB公司的影响
+
+						许可协议更改对MangoDB公司来说，无疑是有很大益处的。MangoDB公司通过这一举措有效打击了其云竞争对手，进一步夯实其Atlas托管云服务，未来将会从“软件即服务”上获取更多的收入。与Redis Labs将其自建的Redis模块由开源软件直接变为闭源软件不同，MangoDB社区版本仍然是开源软件，这也减少了开源界对MangoDB更改许可协议的反感情绪。
+
+						2、许可协议更改对开源社区的影响
+
+						许可协议更改不影响MangoDB社区服务器的常规用户。在开源社区中，SSPL赋予用户的自由与AGPL许可下的MongoDB赋予用户的自由是相同的——用户仍然可以自由地使用、审查、修改、再发布源代码。如果某公司仅仅将MangoDB在公司内部使用，或将其作为服务提供给子公司使用，不属于提供服务给第三方的情况，不需要受13条款的约束，也不受更换许可协议的影响。此外，许可协议更改后，要求云服务厂商将其对MangoDB的修改反馈给开源社区，这将有助于开源软件不断完善，对开源社区的发展有长远意义。
+
+						3、许可协议更改对云服务商的影响
+
+						MangoDB更换许可协议之后，云服务厂商如果想销售基于MangoDB的云服务，要么需要完全公开其服务源代码，要么需要向MangoDB购买商业许可。MangoDB许可协议中，对“服务源代码”的范围界定非常宽泛，不仅包括MangoDB或其修改版本对应的源代码，还包括管理软件、用户界面、应用程序接口、自动化软件、监控软件、备份软件、存储软件和托管软件的源代码。将这些“服务源代码”完全公开，意味着这些云服务厂商丧失了产品差异化的能力。因此，除MangoDB公司之外的其他云服务厂商可能也就没有积极性销售基于MangoDB的云服务。
+
+						四、MangoDB更改许可协议对我国企业开源的启示
+
+						从Facebook更改开源项目React的开源许可协议，到Redis Labs更改自建的Redis模块的开源许可协议，再到MangoDB更改社区服务器的开源许可协议，这一系列事件需要引起我国开源企业的重视，并从中得到启示。
+
+						1、理解开源的游戏规则
+
+						随着商业公司逐渐成为开源的主要力量，开源变得越来越不那么“纯粹”，逐渐成为企业盈利的一种方式。开源软件开发模式的选择、开源许可协议的选择、开源软件的盈利模式的选择，都是一脉相承、紧密相关的。例如，开源基金会主导的开源软件，往往会选择Apache、BSD、MIT这样的宽松的开源许可协议，以吸引更多的商业公司参与。商业企业主导的开源软件，往往会选择GPL这类强著佐权型许可协议，以保证其双许可商业模式的实现。企业只有理解了开源的游戏规则，才能在开源中获利，有效降低知识产权侵权风险。
+
+						2、谨慎选择开源软件
+
+						开源不是“免费的午餐”，企业主导的开源项目往往充满了层层陷阱。如果一个开源软件是一家企业主导，这家企业又拥有全部开源代码的著作权的话，那么这家企业就可以随时变更该开源软件的开源许可协议，甚至将其变为闭源。例如，Redis将自建的Redis模块——RediSearch，Redis Graph，ReJSON，ReBloom和Redis-ML的许可协议由AGPL v3变更为Apache v2与Commons Clause相结合的许可协议，实际上是这些自建模块已经不是开源软件，而仅仅是可以获得源代码。这种许可协议的突然变更，会使得使用这些开源软件的企业陷入两难境地。在自己的产品中更换开源软件，则替换成本很高；如不更换开源软件，新的许可协议往往需要将私有代码公开甚至不允许商业销售。因此，企业一开始就谨慎选择开源软件，不仅仅要对其性能进行检测，也需要对充分考虑其知识产权风险。
+
+						3、使用开源软件应遵从开源许可协议
+
+						开源软件不是公共领域的软件，不可以任意使用。绝大部分开源软件都是有著作权，且受著作权法保护的。开源软件的著作权人通过开源许可协议将开源软件的复制权、修改权、发行权等部分权利让渡给了被许可人，被许可人在遵从开源许可协议规定的前提下，才可以行使这些权利。如果企业没有按照开源许可协议的规定使用开源软件，就存在很大的著作权侵权风险。
+
+						4、做好开源软件的风险防控
+
+						开源许可协议往往都有“不担保”条款，这意味着企业使用开源软件需要风险自负。在这种情况下，企业对开源软件的风险防控显得尤为重要。一方面，要完善企业开源软件管理流程，规范企业内部对开源软件的使用，降低因不合规使用开源软件带来的法律风险；另一方面，要关注所使用的开源软件的相关法律纠纷，建立风险预警机制，及时在产品中更换有风险的开源代码。
+
+						五、结语
+
+						随着ICT新技术的发展，开源越来越成为一种主流的开发模式。认清开源的本质、了解开源的游戏规则，对于我国企业发展开源、规避开源软件风险至关重要。开源不是免费的午餐，使用国外企业主导的开源软件必然有重重限制。因此，我国企业应大力发展有自主知识产权的开源软件、建立活跃的开源社区、构建健康的开源生态，才能真正突破国外技术壁垒，掌握ICT领域的核心技术。
+					</div>
+				</div>
+			</section>
+			<section>
 				<h2>install mongodb node.js driver</h2>
-				<p class="class___command">
+				<div class="class___command">
 					npm install mongodb --save
-				</p>
+				</div>
 			</section>
 			<section>
 				<h2>配置文格式</h2>
@@ -158,47 +265,51 @@
 			</section>
 			<section>
 				<h2>删除数据库</h2>
-				<p class="class___command">
+				<div class="class___command">
 					use dbname;
 					<br/>
 					db.dropDatabase();
-				</p>
+				</div>
 				先选择使用要删除的数据库, 在删除当前数据库
 			</section>
 			<section>
 				<h2>查看当前数据库的统计信息</h2>
-				<p class="class___command">
-					db.stats();
-				</p>
-				output :
-				<p class="class___command">
-					{<br/>
-					<span class="class___line_head"></span>"db" : "test",<br/>
-					<span class="class___line_head"></span>"collections" : 0,<br/>
-					<span class="class___line_head"></span>"views" : 0,<br/>
-					<span class="class___line_head"></span>"objects" : 0,<br/>
-					<span class="class___line_head"></span>"avgObjSize" : 0,<br/>
-					<span class="class___line_head"></span>"dataSize" : 0,<br/>
-					<span class="class___line_head"></span>"storageSize" : 0,<br/>
-					<span class="class___line_head"></span>"numExtents" : 0,<br/>
-					<span class="class___line_head"></span>"indexes" : 0,<br/>
-					<span class="class___line_head"></span>"indexSize" : 0,<br/>
-					<span class="class___line_head"></span>"fileSize" : 0,<br/>
-					<span class="class___line_head"></span>"fsUsedSize" : 0,<br/>
-					<span class="class___line_head"></span>"fsTotalSize" : 0,<br/>
-					<span class="class___line_head"></span>"ok" : 1<br/>
-					}
-				</p>
+				<div>
+					<div class="class___command">
+						db.stats();
+					</div>
+					output :
+					<div class="class___command">
+						{<br/>
+						<span class="class___line_head"></span>"db" : "test",<br/>
+						<span class="class___line_head"></span>"collections" : 0,<br/>
+						<span class="class___line_head"></span>"views" : 0,<br/>
+						<span class="class___line_head"></span>"objects" : 0,<br/>
+						<span class="class___line_head"></span>"avgObjSize" : 0,<br/>
+						<span class="class___line_head"></span>"dataSize" : 0,<br/>
+						<span class="class___line_head"></span>"storageSize" : 0,<br/>
+						<span class="class___line_head"></span>"numExtents" : 0,<br/>
+						<span class="class___line_head"></span>"indexes" : 0,<br/>
+						<span class="class___line_head"></span>"indexSize" : 0,<br/>
+						<span class="class___line_head"></span>"fileSize" : 0,<br/>
+						<span class="class___line_head"></span>"fsUsedSize" : 0,<br/>
+						<span class="class___line_head"></span>"fsTotalSize" : 0,<br/>
+						<span class="class___line_head"></span>"ok" : 1<br/>
+						}
+					</div>
+				</div>
 			</section>
 			<section>
 				<h2>查看数据库服务的版本</h2>
-				<p class="class___command">
-					db.version();
-				</p>
-				output :
-				<p class="class___command">
-					4.0.7
-				</p>
+				<div>
+					<div class="class___command">
+						db.version();
+					</div>
+					output :
+					<div class="class___command">
+						4.0.7
+					</div>
+				</div>
 			</section>
 			<section>
 				<h2>查看所有数据库服务的链接地址</h2>
